@@ -1,0 +1,79 @@
+{
+	"name": "duduar-dotfiles",
+	"version": "0.1.0",
+	"author": {
+		"name": "Duduar Deagle",
+		"email": "duduar@skiff.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/duduardeagle/dotfiles.git"
+	},
+	"license": "Apache-2.0",
+	"private": "true",
+	"keywords": [
+		"duduar",
+		"dotfiles",
+		"workspace"
+	],
+	"dependencies": {
+		"@commitlint/cli": "18.4.3",
+		"gitmoji-cli": "9.0.0",
+		"husky": "8.0.3",
+		"lint-staged": "15.2.0",
+		"prettier": "3.1.1"
+	},
+	"prettier": {
+		"printWidth": 80,
+		"useTabs": true,
+		"quoteProps": "as-needed",
+		"trailingComma": "none"
+	},
+	"lint-staged": {
+		"*": [
+			"bunx prettier --check"
+		]
+	},
+	"gitmoji": {
+		"autoAdd": false,
+		"emojiFormat": "emoji",
+		"scopePrompt": false,
+		"messagePrompt": false,
+		"capitalizeTitle": true,
+		"gitmojisUrl": "https://gitmoji.dev/api/gitmojis"
+	},
+	"commitlint": {
+		"rules": {
+			"header-max-length": [
+				2,
+				"always",
+				50
+			],
+			"header-full-stop": [
+				2,
+				"never",
+				"."
+			],
+			"body-leading-blank": [
+				2,
+				"always",
+				""
+			],
+			"body-full-stop": [
+				1,
+				"always",
+				"."
+			],
+			"body-case": [
+				2,
+				"always",
+				"sentence-case"
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "husky install",
+		"prettier": "prettier . --check",
+		"prettier:fix": "prettier . --write"
+	}
+}
