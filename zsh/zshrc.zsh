@@ -1,9 +1,9 @@
-# =============================================================================
+# ==============================================================================
 # Duduar's dotfiles
 #
 # ZSH configuration file
 # Copyright (c) 2024 Duduar Deagle
-# =============================================================================
+# ==============================================================================
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not
 # use this file except in compliance with the License. You must obtain a copy
 # of the License with this file or you may obtain a copy of the License at
@@ -15,7 +15,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# =============================================================================
+# ==============================================================================
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -53,9 +53,9 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Plugins
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 source /lib/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -125,9 +125,9 @@ bindkey -M emacs '\e\e' sudo-command-line
 bindkey -M vicmd '\e\e' sudo-command-line
 bindkey -M viins '\e\e' sudo-command-line
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Environment variables
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 export PATH="$HOME/.local/bin:$PATH"
 # -- ranger
 export RANGER_LOAD_DEFAULT_RC=false
@@ -141,9 +141,9 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Keyboard shortcuts
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # -- system
 alias cl="clear"
 alias x="exit"
@@ -173,7 +173,8 @@ alias gc="git commit"
 alias gca='git commit --amend'
 alias gt="git tag"
 alias gmg="git merge"
-alias gl="git lg"
+alias gl="git lg -n 20"
+alias glc="git lg"
 alias glg="git log"
 alias gs="git show"
 alias gck="git checkout"
@@ -182,6 +183,7 @@ alias gbr="git branch"
 alias gsw="git switch"
 alias grt="git remote"
 alias gp="git push"
+alias gpt="git push --tags"
 alias gf="git fetch"
 alias gpl="git pull"
 # -- bun
