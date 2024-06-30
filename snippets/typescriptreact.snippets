@@ -1,0 +1,91 @@
+# ============================================================================ #
+# Duduar's dotfiles                                                            #
+#                                                                              #
+# Typescript React snippet file                                                #
+# Copyright (c) 2024 Duduar Deagle                                             #
+# ============================================================================ #
+# Licensed under the Apache License, Version 2.0 (the "License"); you must not #
+# use this file except in compliance with the License. You may obtain a copy   #
+# of the License with this file or you must obtain a copy of the License at:   #
+#                                                                              #
+# https://www.apache.org/licenses/LICENSE-2.0                                  #
+#                                                                              #
+# Unless required by applicable law or agreed to in writing,                   #
+# software distributed under the License is distributed on an "AS IS" BASIS,   #
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.     #
+# See the License for the specific language governing permissions and          #
+# limitations under the License.                                               #
+# ============================================================================ #
+
+snippet cmp "Create a React component" b
+/* Import dependencies */
+import * as React from "react"
+
+/* Define interfaces */
+interface Props {}
+
+/* Set up a ${1} component */
+const ${1}: React.FC<Props> = () => { 
+	return ${2}
+}
+
+export default ${1}
+endsnippet
+
+snippet sty "Create a story" b
+/* Import dependencies */
+import type { Meta, StoryObj } from "@storybook/react"
+
+/* Import components */
+import {$1} from "./${1}"
+
+/* Define types */
+type Story = StoryObj<typeof ${1}>
+
+/* Define meta */
+export default {
+	title: "${2}/${1}",
+	component: ${1},
+	tags: ["autodocs"]
+} satisfies Meta<typeof ${1}>
+
+/* Set up stories */
+export const Default: Story = {}
+endsnippet
+
+snippet nly "Create a Next.js layout file" b
+/* Import dependencies */
+import * as React from "react"
+
+/* Import types */
+import { type Metadata } from "next"
+
+/* Define metadata */
+export const metadata: Metadata = {
+	title: "${2}"
+}
+
+/* Define interfaces */
+interface Props {
+	children: React.ReactNode
+}
+
+/* Set up the ${1} layout */
+const ${1}Layout: React.FC<Props> = ({children}) => {
+	return children
+}
+
+export default ${1}Layout
+endsnippet
+
+snippet npg "Create a Next.js page file" b
+/* Import dependencies */
+import * as React from "react"
+
+/* Set up the ${1} page */
+const ${1}Page: React.FC = () => {
+	return ${2}
+}
+
+export default ${1}Page
+endsnippet
