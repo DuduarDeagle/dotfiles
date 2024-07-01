@@ -1,0 +1,20 @@
+{
+	"suggest.autoTrigger": "always",
+
+	"diagnostic.virtualText": true,
+	"diagnostic.virtualTextLevel": "error",
+	"diagnostic.virtualTextCurrentLineOnly": false,
+	"diagnostic.virtualTextPrefix": "<- ",
+	"javascript.showUnused": false,
+	"typescript.showUnused": false,
+
+	"javascript.suggest.autoImports": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.suggest.autoImports": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"css.validate": false,
+	"scss.validate": false,
+
+	"coc.preferences.formatOnSave": true,
+	"snippets.ultisnips.pythonPrompt": false
+}
