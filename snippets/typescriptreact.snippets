@@ -25,32 +25,39 @@ import * as React from "react"
 interface Props {}
 
 /* Set up a ${1} component */
-const ${1}: React.FC<Props> = () => { 
-	return ${2}
+const ${2}: React.FC<Props> = () => { 
+	return ${3}
 }
 
-export default ${1}
+/* Export the ${2} component by default */
+export default ${2}
 endsnippet
 
-snippet sty "Create a story" b
+snippet pvd "Create a provider" b
 /* Import dependencies */
-import type { Meta, StoryObj } from "@storybook/react"
+import * as React from "react"
 
-/* Import components */
-import {$1} from "./${1}"
+/* Define interfaces */
+interface Props {
+	children: React.ReactNode
+}
 
-/* Define types */
-type Story = StoryObj<typeof ${1}>
+/* Define provider context */
+const Context = React.createContext<${2}>(${3})
 
-/* Define meta */
-export default {
-	title: "${2}/${1}",
-	component: ${1},
-	tags: ["autodocs"]
-} satisfies Meta<typeof ${1}>
+/* Set up a ${1} provider */
+const Provider: React.FC<Props> = ({children}) => {
+	const ${4}
 
-/* Set up stories */
-export const Default: Story = {}
+	return (
+		<Context.Provider value={${5}}>
+			{children}
+		<Context.Provider>
+	)
+}
+
+/* Export the provider by default */
+export default Provider
 endsnippet
 
 snippet nly "Create a Next.js layout file" b
@@ -88,4 +95,25 @@ const ${1}Page: React.FC = () => {
 }
 
 export default ${1}Page
+endsnippet
+
+snippet sty "Create a story" b
+/* Import dependencies */
+import type { Meta, StoryObj } from "@storybook/react"
+
+/* Import components */
+import {$1} from "./${1}"
+
+/* Define types */
+type Story = StoryObj<typeof ${1}>
+
+/* Define meta */
+export default {
+	title: "${2}/${1}",
+	component: ${1},
+	tags: ["autodocs"]
+} satisfies Meta<typeof ${1}>
+
+/* Set up stories */
+export const Default: Story = {}
 endsnippet
