@@ -58,7 +58,7 @@ precmd_functions+=(keep_current_path)
 # ============================================================================ #
 # Plugins                                                                      #
 # ============================================================================ #
-eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/catppuccin_frappe.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/gruvbox.omp.json)"
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh)"
