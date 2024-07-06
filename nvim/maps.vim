@@ -20,7 +20,8 @@
 let mapleader = ' '
 
 imap <silent>;; <ESC>
-nmap <silent>; <ESC>
+nmap <silent>;; <ESC>
+vmap <silent>;; <ESC>
 
 nmap <C-s> :w<CR>
 nmap <C-k>s :wa<CR>
