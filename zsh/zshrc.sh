@@ -153,7 +153,6 @@ alias la="exa -la --group-directories-first --header --no-icons"
 alias t="erd -lIs name --dir-order last -d logical -y inverted -T 12"
 alias p3="python3"
 # == clipboard
-alias cat="bat"
 alias icat="kitten icat"
 alias cpc="xclip -sel clip -rmlastnl"
 alias clc="xclip -sel clip < /dev/null"
