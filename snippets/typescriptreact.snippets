@@ -72,7 +72,7 @@ import { type Metadata } from "next"
 
 /* Define metadata */
 export const metadata: Metadata = {
-	title: "${2}"
+	title: "${1}"
 }
 
 /* Define interfaces */
@@ -80,12 +80,11 @@ interface Props {
 	children: React.ReactNode
 }
 
-/* Set up the ${1} layout */
-const ${1}Layout: React.FC<Props> = ({children}) => {
-	return children
-}
+/* Set up the layout */
+const Layout: React.FC<Props> = ({children}) => children
 
-export default ${1}Layout
+/* Export the layout by default */
+export default Layout
 endsnippet
 
 snippet npg "Create a Next.js page file" b
