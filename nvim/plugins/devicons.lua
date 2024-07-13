@@ -22,25 +22,31 @@ require('nvim-web-devicons').set_icon {
   astro = {
     icon = '',
     color = "#e44d26",
-    cterm_color = "196",
+    cterm_color = "0",
     name = 'Astro'
   },
   cjs = {
     icon = '',
     color = '#cbcb41',
-    cterm_color = "140",
-    name = 'Cjs'
+    cterm_color = "0",
+    name = 'CommonJS'
   },
   norg = {
     icon = '',
     color = '#70a898',
-    cterm_color = '140',
+    cterm_color = '0',
     name = 'Norg'
   },
-  ['tailwind.config.cjs'] = {
+  ['prettier.config.js'] = {
+    icon = '',
+    color = '#458d90',
+    cterm_color = "0",
+    name = 'prettier.config.js'
+  },
+  ['tailwind.config.js'] = {
     icon = '󱏿',
     color = '#38bdf8',
-    cterm_color = '38',
+    cterm_color = '0',
     name = 'tailwind.config.cjs'
   }
 }
