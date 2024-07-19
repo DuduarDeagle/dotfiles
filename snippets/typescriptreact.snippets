@@ -17,7 +17,7 @@
 # limitations under the License.                                               #
 # ============================================================================ #
 
-snippet cmp "Create a React component" b
+snippet rcmp "Create a React component" b
 /* Import dependencies */
 import * as React from "react"
 
@@ -29,7 +29,7 @@ const ${2}: React.FC<Props> = () => {
 	return ${3}
 }
 
-/* Export the ${2} component by default */
+/* Export the ${1} component by default */
 export default ${2}
 endsnippet
 
@@ -83,7 +83,6 @@ interface Props {
 /* Set up the layout */
 const Layout: React.FC<Props> = ({children}) => children
 
-/* Export the layout by default */
 export default Layout
 endsnippet
 
