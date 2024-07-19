@@ -58,7 +58,7 @@ precmd_functions+=(keep_current_path)
 # ============================================================================ #
 # Plugins                                                                      #
 # ============================================================================ #
-eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/gruvbox.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/catppuccin_frappe.omp.json)"
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh)"
@@ -152,8 +152,8 @@ alias l="exa -l --group-directories-first --header --no-icons"
 alias la="exa -la --group-directories-first --header --no-icons"
 alias t="erd -lIs name --dir-order last -d logical -y inverted -T 12"
 alias p3="python3"
-# == clipboard
 alias icat="kitten icat"
+# == clipboard
 alias cpc="xclip -sel clip -rmlastnl"
 alias clc="xclip -sel clip < /dev/null"
 # == neovim
