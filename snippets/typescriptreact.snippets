@@ -33,7 +33,7 @@ const ${2}: React.FC<Props> = () => {
 export default ${2}
 endsnippet
 
-snippet pvd "Create a provider" b
+snippet rpvd "Create a provider" b
 /* Import dependencies */
 import * as React from "react"
 
@@ -43,27 +43,27 @@ interface Props {
 }
 
 /* Define provider context */
-const Context = React.createContext<${2}>(${3})
+const Context = React.createContext<${3}>(${4})
 
 /* Set up a ${1} provider */
-const Provider: React.FC<Props> = ({children}) => {
-	const ${4}
+const ${2}Provider: React.FC<Props> = ({children}) => {
+	const ${5}
 
 	return (
-		<Context.Provider value={${5}}>
+		<Context.Provider value={${6}}>
 			{children}
 		<Context.Provider>
 	)
 }
 
-/* Export a function to ${7} */
-export const use${6}
+/* Export a function to ${8} */
+export const use${7}
 
-/* Export the provider by default */
-export default Provider
+/* Export the ${1} provider by default */
+export default ${2}Provider
 endsnippet
 
-snippet nly "Create a Next.js layout file" b
+snippet nly "Create a Next.js layout" b
 /* Import dependencies */
 import * as React from "react"
 
@@ -80,13 +80,14 @@ interface Props {
 	children: React.ReactNode
 }
 
-/* Set up the layout */
-const Layout: React.FC<Props> = ({children}) => children
+/* Set up the ${2} layout */
+const ${3}Layout: React.FC<Props> = ({children}) => children
 
-export default Layout
+/* Export the ${2} layout by default */
+export default ${3}Layout
 endsnippet
 
-snippet npg "Create a Next.js page file" b
+snippet npg "Create a Next.js page" b
 /* Import dependencies */
 import * as React from "react"
 
@@ -95,11 +96,12 @@ const ${2}Page: React.FC = () => {
 	return ${3}
 }
 
+/* Export the ${1} page by default */
 export default ${2}Page
 endsnippet
 
 snippet sty "Create a story" b
-/* Import dependencies */
+/* Import types */
 import type { Meta, StoryObj } from "@storybook/react"
 
 /* Import components */

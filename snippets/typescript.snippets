@@ -21,13 +21,17 @@ snippet clg "Print a console message" A
 console.log(${1})
 endsnippet
 
+snippet cerr "Print a console error message" A
+console.error(${1})
+endsnippet
+
 snippet itf "Define an Interface" A
 interface ${1} {
 	${2}
 }
 endsnippet
 
-snippet mgm "Create a mongoose model" b
+snippet mgsc "Create a mongoose schema" b
 /* Import dependencies */
 import mongoose from "mongoose"
 
@@ -41,5 +45,6 @@ const schema = new mongoose.Schema({
 	${2}
 })
 
+/* Export the schema by default */
 export default mongoose.model("${1}", schema)
 endsnippet
