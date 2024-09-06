@@ -25,9 +25,9 @@ setopt histignorealldups sharehistory
 
 bindkey -e
 
-HISTSIZE=1000
-SAVEHIST=1000
 HISTFILE=~/.zsh_history
+HISTSIZE=100
+SAVEHIST=100
 
 autoload -Uz compinit
 compinit
@@ -50,10 +50,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 export GPG_TTY=$(tty)
-keep_current_path() {
-  printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
-}
-precmd_functions+=(keep_current_path)
 
 # ============================================================================ #
 # Plugins                                                                      #
@@ -163,7 +159,7 @@ alias vim="nvim"
 alias g="git"
 alias gcl="git clone"
 alias gi="git init"
-alias gst="git st"
+alias gst="git status -s -b"
 alias ga="git add"
 alias gap="git add -p"
 alias gd="git diff"
@@ -173,8 +169,8 @@ alias gc="git commit"
 alias gca='git commit --amend'
 alias gt="git tag"
 alias gmg="git merge"
-alias gl="git lg -n 20"
-alias glc="git lg"
+alias gl="git log --oneline --decorate --all --graph -n 20"
+alias glc="git log --oneline --decorate --all --graph"
 alias glg="git log"
 alias gs="git show"
 alias gck="git checkout"
