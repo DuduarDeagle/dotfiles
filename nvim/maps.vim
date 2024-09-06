@@ -31,7 +31,7 @@ nmap <C-w> :bw<CR>
 nmap <leader>, :bprevious<CR>
 nmap <leader>. :bnext<CR>
 nmap <leader>z :tab split<CR>
-nmap <ESC><C-w> :tab close<CR>
+nmap <leader>w :tab close<CR>
 
 nmap <CS-I> :CocCommand editor.action.organizeImport<CR>
 
@@ -43,6 +43,7 @@ nmap <silent>gr <Plug>(coc-references)
 nmap <C-b> :NeoTreeFloatToggle<CR>
 
 nmap <C-p> :Telescope find_files<CR>
+nmap <C-k>p :Telescope buffers<CR>
 nmap <C-k><C-p> :Telescope buffers<CR>
 nmap <ESC><C-f> :Telescope live_grep<CR>
 nmap <F1> :Telescope command_history<CR>

@@ -26,7 +26,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x'}
 Plug 'ziontee113/color-picker.nvim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -37,7 +36,6 @@ Plug 'dense-analysis/ale'
 Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'wuelnerdotexe/vim-astro'
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-fugitive'
@@ -53,7 +51,6 @@ so ~/.config/nvim/plugins/color-picker.lua
 so ~/.config/nvim/plugins/comments.lua
 so ~/.config/nvim/plugins/tabnine.lua
 so ~/.config/nvim/plugins/treesitter.lua
-so ~/.config/nvim/plugins/bufferline.lua
 so ~/.config/nvim/plugins/lualine.lua
 so ~/.config/nvim/plugins/ibl.lua
 so ~/.config/nvim/plugins/gitsigns.lua
