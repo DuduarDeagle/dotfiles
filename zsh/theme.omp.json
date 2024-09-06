@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"version": 2,
+	"blocks": [
+		{
+			"alignment": "left",
+			"segments": [
+				{
+					"foreground": "#BF616A",
+					"properties": {
+						"macos": "mac"
+					},
+					"style": "plain",
+					"template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+					"type": "os"
+				},
+				{
+					"type": "sysinfo",
+					"properties": {
+						"precision": 2
+					},
+					"style": "plain",
+					"foreground": "#739E67",
+					"template": " \u2022 \ue266 RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1003312) }}MB/{{ (div .PhysicalTotalMemory 1003312) }}MB \u2022 "
+				},
+				{
+					"foreground": "#B96BBB",
+					"style": "plain",
+					"template": "I'm {{ .UserName }} \u2023 ",
+					"type": "session"
+				},
+				{
+					"foreground": "#81A1C1",
+					"properties": {
+						"style": "agnoster_short"
+					},
+					"style": "plain",
+					"template": "{{ .Path }} ",
+					"type": "path"
+				}
+			],
+			"type": "prompt"
+		},
+		{
+			"alignment": "left",
+			"segments": [
+				{
+					"foreground": "#6C6C6C",
+					"properties": {
+						"branch_ahead_icon": "<#88C0D0>\u21e1 </>",
+						"branch_behind_icon": "<#88C0D0>\u21e3 </>",
+						"branch_icon": "",
+						"fetch_stash_count": true,
+						"fetch_status": true,
+						"fetch_upstream_icon": true,
+						"github_icon": ""
+					},
+					"style": "plain",
+					"template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+					"type": "git"
+				}
+			],
+			"type": "prompt"
+		},
+		{
+			"alignment": "left",
+			"newline": true,
+			"segments": [
+				{
+					"foreground": "#B48EAD",
+					"foreground_templates": ["{{ if gt .Code 0 }}#BF616A{{ end }}"],
+					"properties": {
+						"always_enabled": true
+					},
+					"style": "plain",
+					"template": "\u276f ",
+					"type": "status"
+				}
+			],
+			"type": "prompt"
+		}
+	],
+	"console_title_template": "{{if .Root}}(Admin){{end}} {{.PWD}}",
+	"transient_prompt": {
+		"foreground": "#B48EAD",
+		"foreground_templates": ["{{ if gt .Code 0 }}#BF616A{{ end }}"],
+		"template": "\u276f "
+	}
+}
