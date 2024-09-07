@@ -1,9 +1,9 @@
 {
 	"name": "duduar-dotfiles",
-	"version": "0.1.0-alpha.0",
+	"version": "0.1.0",
 	"author": {
 		"name": "Duduar Deagle",
-		"email": "hi@duduar.dev"
+		"email": "support@duduar.dev"
 	},
 	"repository": {
 		"type": "git",
