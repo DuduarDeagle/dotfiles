@@ -50,6 +50,8 @@ nmap <F1> :Telescope command_history<CR>
 
 nmap <C-c> :PickColor<CR>
 
+nmap <C-k>v <Plug>MarkdownPreview
+
 imap <C-j> <C-n>
 imap <C-k> <C-p>
 imap <C-l> <C-y>

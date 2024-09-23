@@ -43,6 +43,8 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'folke/tokyonight.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 so ~/.config/nvim/plugins/telescope.lua
