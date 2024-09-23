@@ -50,7 +50,7 @@ set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable
 
-colorscheme tokyonight-moon
+colorscheme dracula
 set termguicolors
 
 let g:loaded_node_provider = 0
@@ -70,3 +70,4 @@ let g:ale_use_neovim_diagnostics_api = 1
 let g:ale_disable_lsp = 1
 let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
+let g:mkdp_theme= 'light'

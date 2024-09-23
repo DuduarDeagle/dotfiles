@@ -21,7 +21,7 @@
 					},
 					"style": "plain",
 					"foreground": "#739E67",
-					"template": " \u2022 \ue266 RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1003312) }}MB/{{ (div .PhysicalTotalMemory 1003312) }}MB \u2022 "
+					"template": " \u2022 \ue266 RAM: {{ (div (sub .PhysicalTotalMemory .PhysicalAvailableMemory) 1003312) }}MB/{{ (div .PhysicalTotalMemory 1003312) }}MB \u2022 "
 				},
 				{
 					"foreground": "#B96BBB",
