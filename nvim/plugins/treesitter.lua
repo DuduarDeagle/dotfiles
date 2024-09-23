@@ -25,6 +25,7 @@ require('nvim-treesitter.configs').setup {
     'bash',
     'css',
     'graphql',
+    'git_config',
     'javascript',
     'json',
     'lua',
@@ -32,7 +33,7 @@ require('nvim-treesitter.configs').setup {
     'query',
     'tsx',
     'typescript',
-    'vim'
+    'vimdoc'
   },
   ignore_install = {
     'scss'

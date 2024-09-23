@@ -22,29 +22,28 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x'}
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-telescope/telescope-media-files.nvim'
-Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x'}
 Plug 'ziontee113/color-picker.nvim'
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'folke/todo-comments.nvim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale'
-Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'wuelnerdotexe/vim-astro'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
+Plug 'tpope/vim-fugitive'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'folke/tokyonight.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
-
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 so ~/.config/nvim/plugins/telescope.lua

@@ -24,5 +24,7 @@ require('tabnine').setup({
   dismiss_keymap = '<C-]>',
   debounce_ms = 800,
   suggestion_color = {gui = '#808080', cterm = 244},
-  exclude_filetypes = {'TelescopePrompt', 'NvimTree', '*.env', '*.mdx'}
+  exclude_filetypes = {'TelescopePrompt', 'NvimTree', '*.env', '*.mdx'},
+  log_file_path = nil,
+  ignore_certificate_errors = false
 })
